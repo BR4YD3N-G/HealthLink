@@ -7,35 +7,43 @@
 
 import SwiftUI
 
+// A SwiftUI view responsible for managing tab navigation
 struct HLTabView: View {
+    // Access the HealthManager as an environment object
     @EnvironmentObject var manager: HealthManager
+    
+    // State property to track the selected tab
     @State var selectedTab = "Home"
     
     var body: some View {
+        // Create a TabView for navigation
         TabView(selection: $selectedTab) {
+            // Home tab with the HomeView
             HomeView()
-                .tag("home")
+                .environmentObject(manager) // Pass the HealthManager as an environment object
+                .tag("Home") // Set a tag to identify the tab
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "house") // Tab icon
                 }
-                .environmentObject(manager)
             
+            // Content tab with the ContentView
             ContentView()
-                .tag("Content")
+                .tag("Content") // Set a tag
                 .tabItem {
-                    Image(systemName: "person")
+                    Image(systemName: "person") // Tab icon
                 }
             
+            // Settings tab with the SettingsView
             SettingsView()
-                .tag("Settings")
+                .tag("Settings") // Set a tag
                 .tabItem {
-                    Image(systemName: "gearshape")
+                    Image(systemName: "gearshape") // Tab icon
                 }
         }
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
+// PreviewProvider for HLTabView
 struct HLTabView_Previews: PreviewProvider {
     static var previews: some View {
         HLTabView()
