@@ -15,6 +15,7 @@
 		54AE30922AA50603009F007B /* HLTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE30912AA50603009F007B /* HLTabView.swift */; };
 		54AE30942AA50794009F007B /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE30932AA50794009F007B /* ActivityCard.swift */; };
 		54AE30962AA50D22009F007B /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE30952AA50D22009F007B /* HealthManager.swift */; };
+		54AE30992AA51C92009F007B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE30982AA51C92009F007B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		54AE30932AA50794009F007B /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		54AE30952AA50D22009F007B /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		54AE30972AA5106B009F007B /* HealthLink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthLink.entitlements; sourceTree = "<group>"; };
+		54AE30982AA51C92009F007B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				54AE30912AA50603009F007B /* HLTabView.swift */,
 				54AE30932AA50794009F007B /* ActivityCard.swift */,
 				54AE30952AA50D22009F007B /* HealthManager.swift */,
+				54AE30982AA51C92009F007B /* SettingsView.swift */,
 			);
 			path = HealthLink;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54AE30992AA51C92009F007B /* SettingsView.swift in Sources */,
 				54AE30942AA50794009F007B /* ActivityCard.swift in Sources */,
 				54AE30962AA50D22009F007B /* HealthManager.swift in Sources */,
 				54AE30822AA50249009F007B /* ContentView.swift in Sources */,

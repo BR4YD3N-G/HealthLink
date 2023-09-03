@@ -13,10 +13,14 @@ struct HomeView: View {
     var body: some View {
         VStack {
             LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
-                ActivityCard(activity: Activity(id: 0, title: "Steps", subtitle: "Goal", icon: "figure.walk", amount: "100"))
-                
-                ActivityCard(activity: Activity(id: 1, title: "Glucose", subtitle: "", icon: "drop.degreesign", amount: "100ich"))
+                ForEach(manager.activites.sorted(by: { $0.value.id < $1.value.id }), id: \.key) { item in
+                    ActivityCard(activity: item.value)
+                }
             }
+            .padding(.horizontal)
+        }
+        .onAppear {
+            manager.fetchTodaySteps()
         }
     }
 }
