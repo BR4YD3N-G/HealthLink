@@ -11,6 +11,10 @@
 		54AE30822AA50249009F007B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE30812AA50249009F007B /* ContentView.swift */; };
 		54AE30842AA50249009F007B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AE30832AA50249009F007B /* Assets.xcassets */; };
 		54AE30872AA50249009F007B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AE30862AA50249009F007B /* Preview Assets.xcassets */; };
+		54AE30902AA50413009F007B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE308F2AA50413009F007B /* HomeView.swift */; };
+		54AE30922AA50603009F007B /* HLTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE30912AA50603009F007B /* HLTabView.swift */; };
+		54AE30942AA50794009F007B /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE30932AA50794009F007B /* ActivityCard.swift */; };
+		54AE30962AA50D22009F007B /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE30952AA50D22009F007B /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		54AE30812AA50249009F007B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54AE30832AA50249009F007B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54AE30862AA50249009F007B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		54AE308F2AA50413009F007B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		54AE30912AA50603009F007B /* HLTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLTabView.swift; sourceTree = "<group>"; };
+		54AE30932AA50794009F007B /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		54AE30952AA50D22009F007B /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		54AE30972AA5106B009F007B /* HealthLink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthLink.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +60,15 @@
 		54AE307E2AA50249009F007B /* HealthLink */ = {
 			isa = PBXGroup;
 			children = (
+				54AE30972AA5106B009F007B /* HealthLink.entitlements */,
 				54AE307F2AA50249009F007B /* HealthLinkApp.swift */,
 				54AE30812AA50249009F007B /* ContentView.swift */,
 				54AE30832AA50249009F007B /* Assets.xcassets */,
 				54AE30852AA50249009F007B /* Preview Content */,
+				54AE308F2AA50413009F007B /* HomeView.swift */,
+				54AE30912AA50603009F007B /* HLTabView.swift */,
+				54AE30932AA50794009F007B /* ActivityCard.swift */,
+				54AE30952AA50D22009F007B /* HealthManager.swift */,
 			);
 			path = HealthLink;
 			sourceTree = "<group>";
@@ -137,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54AE30942AA50794009F007B /* ActivityCard.swift in Sources */,
+				54AE30962AA50D22009F007B /* HealthManager.swift in Sources */,
 				54AE30822AA50249009F007B /* ContentView.swift in Sources */,
+				54AE30902AA50413009F007B /* HomeView.swift in Sources */,
 				54AE30802AA50249009F007B /* HealthLinkApp.swift in Sources */,
+				54AE30922AA50603009F007B /* HLTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,12 +282,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthLink/HealthLink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthLink/Preview Content\"";
 				DEVELOPMENT_TEAM = Y6G5RKHQPP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow $(PRODUCT_NAME) to read data from apple Health";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +313,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthLink/HealthLink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthLink/Preview Content\"";
 				DEVELOPMENT_TEAM = Y6G5RKHQPP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow $(PRODUCT_NAME) to read data from apple Health";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

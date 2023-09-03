@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct HealthLinkApp: App {
+    @StateObject var manager = HealthManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HLTabView()
         }
     }
 }
